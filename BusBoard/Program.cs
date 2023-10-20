@@ -17,7 +17,7 @@ internal class Program
             throw new Exception("Unable to retrieve predictions from JSON response");
         }
 
-        Console.WriteLine($"Bus arriving in {predictions[0].TimeToStation} seconds");
+        Console.WriteLine($"The bus {predictions[0].LineName}, destination: {predictions[0].DestinationName} is arriving in {predictions[0].TimeToStation/60} minutes.");
     }
     
     async static Task Main(string[] args)
